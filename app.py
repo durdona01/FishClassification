@@ -2,9 +2,10 @@ import streamlit as st
 from fastai.vision.all import *
 import pathlib
 import plotly.express as px
+import platform
 
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
+plt = platform.system()
+if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 
 # title
 st.title("Baliqning to'rt turga ajratib aniqlovchi model. \n 4 turdagi(Fish(Goldfish, Shark, Rays and skates, Seahorse)) baliqlarni klassifikatsiya qila oladi")
@@ -27,4 +28,3 @@ if file:
     # plotting
     fig = px.bar(x=probs*100, y=model.dls.vocab)
     st.plotly_chart(fig)
-    
