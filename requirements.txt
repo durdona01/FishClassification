@@ -1,0 +1,6 @@
+fastai==2.7.17
+plotly==5.24.1
+pandas
+plotly
+streamlit
+pandas-datareader
