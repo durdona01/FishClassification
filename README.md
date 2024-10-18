@@ -1,2 +1,2 @@
 # fishClassification
-Fishes Classifikation Model
+Fishes Classification Model
